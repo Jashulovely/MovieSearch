@@ -1,4 +1,4 @@
-//TMDB 
+
 
 const API_KEY = 'api_key=04a0bd2c94bab5df124dec3daf0152e3';
 const BASE_URL = 'https://api.themoviedb.org/3';
@@ -238,7 +238,6 @@ function showMovies(data) {
 }
 
 const overlayContent = document.getElementById('overlay-content');
-/* Open when someone clicks on the span element */
 function openNav(movie) {
   let id = movie.id;
   fetch(BASE_URL + '/movie/'+id+'/videos?'+API_KEY).then(res => res.json()).then(videoData => {
@@ -284,7 +283,6 @@ function openNav(movie) {
   })
 }
 
-/* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
